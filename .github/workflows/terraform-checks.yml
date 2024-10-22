@@ -12,6 +12,9 @@ jobs:
   terraform-checks:
     name: 'Terraform Checks'
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./abinbev-terraform
     
     steps:
     - name: Checkout

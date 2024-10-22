@@ -11,6 +11,10 @@ permissions:
 jobs:
   deploy:
     runs-on: gh-larger-linux-small
+    defaults:
+      run:
+        working-directory: ./abinbev-terraform
+        
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
