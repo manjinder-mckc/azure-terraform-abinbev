@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   deploy:
-    runs-on: gh-larger-linux-small
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./abinbev_app
