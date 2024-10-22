@@ -13,8 +13,8 @@ jobs:
     runs-on: gh-larger-linux-small
     defaults:
       run:
-        working-directory: ./abinbev-terraform
-        
+        working-directory: ./abinbev_app
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
