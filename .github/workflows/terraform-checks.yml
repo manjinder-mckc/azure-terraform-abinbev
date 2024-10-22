@@ -4,6 +4,7 @@ on:
       - main
 
 permissions:
+  security-events: write # Needed to upload-sarif
   contents: read 
   actions: read 
 
@@ -33,3 +34,10 @@ jobs:
       uses: bridgecrewio/checkov-action@master
       with: 
         framework: terraform
+
+    - name: Upload SARIF file
+      if: success() || failure()
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: results.sarif
+        category: checkov
