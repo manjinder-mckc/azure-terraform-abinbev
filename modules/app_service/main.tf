@@ -9,6 +9,8 @@ resource "azurerm_service_plan" "this" {
   resource_group_name = azurerm_resource_group.this.name
   os_type             = "Linux"
   sku_name            = "Y1"
+
+  depends_on = [azurerm_resource_group.this]
 }
 
 
@@ -23,6 +25,8 @@ resource "azurerm_app_service" "this" {
   }
 
   app_settings = var.app_settings
+
+  depends_on = [azurerm_service_plan.this]
 
   tags = var.tags
 }
