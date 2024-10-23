@@ -1,18 +1,3 @@
-variable "client_id" {
-  description = "The client ID of the service principal"
-  type        = string
-}
-
-variable "tenant_id" {
-  description = "The tenant ID of the Azure subscription"
-  type        = string
-}
-
-variable "subscription_id" {
-  description = "The subscription ID of the Azure subscription"
-  type        = string
-}
-
 variable "rg_location" {
   description = "The location where the resources will be created"
   type        = string
